@@ -2,6 +2,10 @@ apply plugin: 'com.android.library'
 
 buildscript {
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
+        google()
         jcenter()
     }
     dependencies {

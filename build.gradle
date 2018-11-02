@@ -3,8 +3,11 @@
 buildscript {
 
     repositories {
-        jcenter()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
         google()
+        jcenter()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:${ANDROID_GRADLE_VERSION}"
@@ -18,8 +21,11 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
         google()
+        jcenter()
         configurations.all {
             resolutionStrategy.cacheDynamicVersionsFor 4, 'hours'
         }
